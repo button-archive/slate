@@ -2,6 +2,9 @@
 title: API Reference
 
 language_tabs:
+  - objective_c
+  - swift
+  - java
   - shell
   - ruby
   - python
@@ -28,6 +31,55 @@ This example API documentation page was created with [Slate](https://github.com/
 # Authentication
 
 > To authorize, use this code:
+
+```objective_c
+Tyler *tyler = [Tyler apiUser:@"username" apiKey:@"password"];
+```
+
+```swift
+let session = Session()
+session.authentication = Authentication.apiKey("SG.abcdefghijklmnop.qrstuvwxyz012345-6789")
+
+/*
+`Session` also has a singleton instance that you can configure once and reuse throughout your code.
+*/
+Session.shared.authentication = Authentication.apiKey("SG.abcdefghijklmnop.qrstuvwxyz012345-6789")
+```
+
+```java
+@Override
+protected Void doInBackground(Void... params) {
+
+  try {
+    tyler tyler = new tyler(tyler_USERNAME, tyler_PASSWORD);
+
+    tyler.Email email = new tyler.Email();
+
+    // Get values from edit text to compose email
+    // TODO: Validate edit texts
+    email.addTo(mTo);
+    email.setFrom(mFrom);
+    email.setSubject(mSubject);
+    email.setText(mText);
+
+    // Attach image
+    if (mUri != null) {
+      email.addAttachment(mAttachmentName, mAppContext.getContentResolver().openInputStream(mUri));
+    }
+
+    // Send email, execute http request
+    tyler.Response response = tyler.send(email);
+    mMsgResponse = response.getMessage();
+
+    Log.d("SendAppExample", mMsgResponse);
+
+  } catch (tylerException | IOException e) {
+    Log.e("SendAppExample", e.toString());
+  }
+
+  return null;
+}
+```
 
 ```ruby
 require 'kittn'
@@ -68,6 +120,55 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 # Kittens
 
 ## Get All Kittens
+
+```objective_c
+h = 2;
+```
+
+```swift
+let session = Session()
+session.authentication = Authentication.apiKey("SG.abcdefghijklmnop.qrstuvwxyz012345-6789")
+
+/*
+`Session` also has a singleton instance that you can configure once and reuse throughout your code.
+*/
+Session.shared.authentication = Authentication.apiKey("SG.abcdefghijklmnop.qrstuvwxyz012345-6789")
+```
+
+```java
+@Override
+protected Void doInBackground(Void... params) {
+
+  try {
+    tyler tyler = new tyler(tyler_USERNAME, tyler_PASSWORD);
+
+    tyler.Email email = new tyler.Email();
+
+    // Get values from edit text to compose email
+    // TODO: Validate edit texts
+    email.addTo(mTo);
+    email.setFrom(mFrom);
+    email.setSubject(mSubject);
+    email.setText(mText);
+
+    // Attach image
+    if (mUri != null) {
+      email.addAttachment(mAttachmentName, mAppContext.getContentResolver().openInputStream(mUri));
+    }
+
+    // Send email, execute http request
+    tyler.Response response = tyler.send(email);
+    mMsgResponse = response.getMessage();
+
+    Log.d("SendAppExample", mMsgResponse);
+
+  } catch (tylerException | IOException e) {
+    Log.e("SendAppExample", e.toString());
+  }
+
+  return null;
+}
+```
 
 ```ruby
 require 'kittn'
@@ -135,6 +236,55 @@ Remember — a happy kitten is an authenticated kitten!
 
 ## Get a Specific Kitten
 
+```objective_c
+h = 2;
+```
+
+```swift
+let session = Session()
+session.authentication = Authentication.apiKey("SG.abcdefghijklmnop.qrstuvwxyz012345-6789")
+
+/*
+`Session` also has a singleton instance that you can configure once and reuse throughout your code.
+*/
+Session.shared.authentication = Authentication.apiKey("SG.abcdefghijklmnop.qrstuvwxyz012345-6789")
+```
+
+```java
+@Override
+protected Void doInBackground(Void... params) {
+
+  try {
+    tyler tyler = new tyler(tyler_USERNAME, tyler_PASSWORD);
+
+    tyler.Email email = new tyler.Email();
+
+    // Get values from edit text to compose email
+    // TODO: Validate edit texts
+    email.addTo(mTo);
+    email.setFrom(mFrom);
+    email.setSubject(mSubject);
+    email.setText(mText);
+
+    // Attach image
+    if (mUri != null) {
+      email.addAttachment(mAttachmentName, mAppContext.getContentResolver().openInputStream(mUri));
+    }
+
+    // Send email, execute http request
+    tyler.Response response = tyler.send(email);
+    mMsgResponse = response.getMessage();
+
+    Log.d("SendAppExample", mMsgResponse);
+
+  } catch (tylerException | IOException e) {
+    Log.e("SendAppExample", e.toString());
+  }
+
+  return null;
+}
+```
+
 ```ruby
 require 'kittn'
 
@@ -186,4 +336,3 @@ This endpoint retrieves a specific kitten.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to retrieve
-
